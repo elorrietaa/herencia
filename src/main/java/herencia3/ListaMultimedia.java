@@ -1,14 +1,12 @@
 package herencia3;
 
-import java.util.Arrays;
-
 public class ListaMultimedia {
 	//atributos
 	private int contador = 0;
 	private int maximoContador;
-	private Multimedia [] arrayListaMultimedia;
+	private Multimedia [] arrayListaMultimedia; //Array de objetos multimedia
 	private int position = 0;
-	
+	 
     //constructor:
 	public ListaMultimedia(int maximoContador) {
 		this.maximoContador = maximoContador;
@@ -17,13 +15,20 @@ public class ListaMultimedia {
 
 	//get y set
 	public int getContador() {
-		return maximoContador;
+		return contador;
 	}
 
 	public void setContador(int contador) {
-		this.maximoContador = contador;
+		this.contador = contador;
 	}
 
+	public int getMaximoContador() {
+		return maximoContador;
+	}
+
+	public void setMaximoContador(int contador) {
+		this.maximoContador = maximoContador;
+	}
 	public Multimedia[] getArrayMultimedia() {
 		return arrayListaMultimedia;
 	}
@@ -42,12 +47,7 @@ public class ListaMultimedia {
 	
 	//metodos:
 	public int size() {
-		int numeroObjetos=0;
-		for(int i=0;i<arrayListaMultimedia.length;i++) {
-			numeroObjetos=numeroObjetos+1;
-		}
-		System.out.println("El numeroObejtos del arrayListaMultimedia es:"+ numeroObjetos );
-		return numeroObjetos;
+		return this.contador;
 	}
 	
 	public boolean add(Multimedia m) {
@@ -57,7 +57,7 @@ public class ListaMultimedia {
 			listaLlena = true;
 		}
 		else
-		{
+		{ 
 			listaLlena = false;
 			arrayListaMultimedia[this.contador-1] = m;
 		}
@@ -69,24 +69,11 @@ public class ListaMultimedia {
 		return arrayListaMultimedia[posicion];
 	}
 
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("ListaMultimedia [arrayListaMultimedia=").append(System.getProperty("line.separator")).append(Arrays.toString(arrayListaMultimedia))
-				.append("]");
-		return builder.toString();
+	public String toString(int pos) {
+		
+		return "arrayListaMultimedia:" + arrayListaMultimedia[pos] ;
 	}
 
-	
-	
-	public String toStringPrueba() {
-		String imprimirLista = null;
-		
-		for(int i=0;i<arrayListaMultimedia.length;i++) {
-			imprimirLista= "ListaMultimedia [arrayListaMultimedia=" + Arrays.toString(arrayListaMultimedia) + "]";
-		}
-		return imprimirLista;
-	}
 
 
 	

@@ -27,10 +27,9 @@ public class PrincipalHerencia3 {
 		
 		//ver todo
 		System.out.println("LISTA MULTIMEDIA:_______________________________");
-		System.out.println(arrayListaMultimedia.toString());
-		
-		System.out.println("LISTA MULTIMEDIA PRUEBA:________________________");
-		System.out.println(arrayListaMultimedia.toStringPrueba());
+		for(int i=0;i<arrayListaMultimedia.getContador();i++) {
+			System.out.println(arrayListaMultimedia.toString(i));
+		}
 	
 		// método size: devuelve el número de objetos que hay en la lista.
 		arrayListaMultimedia.size();
@@ -45,11 +44,15 @@ public class PrincipalHerencia3 {
 		arrayListaMultimedia2.add(disco2);
 		arrayListaMultimedia2.add(disco3);
 		System.out.println("LISTA MULTIMEDIA:_______________________________");
-		System.out.println(arrayListaMultimedia2.toString());
+		for(int i=0;i<arrayListaMultimedia.getContador();i++) {
+			System.out.println(arrayListaMultimedia2.toString(i));
+		} 
 		// método size: devuelve el número de objetos que hay en la lista.
 		arrayListaMultimedia.size();
+		System.out.println(arrayListaMultimedia.size());
 		// método size: devuelve el número de objetos que hay en la lista2.
 		arrayListaMultimedia2.size();
+		System.out.println(arrayListaMultimedia2.size());
 	}
 
 }

@@ -1,12 +1,11 @@
 package herencia3;
 
 public class Multimedia {
-
 	//atributos
-	private String titulo;
-	private String autor;
-	private String formato = "desconocido";
-	private float duracion;
+	protected String titulo;
+	protected String autor;
+	protected String formato = "desconocido";
+	protected float duracion;
 	
 	//constructor
 	public Multimedia(String titulo, String autor, String formato, float duracion) {
@@ -16,8 +15,6 @@ public class Multimedia {
 		this.formato = formato;
 		this.duracion = duracion;
 	}
-
-
 
 	//get y set
 	public String getTitulo() {
@@ -54,14 +51,9 @@ public class Multimedia {
 		return sonIguales;
 	}
 
-
-
 	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Multimedia [titulo=").append(titulo).append(", autor=").append(autor).append(", formato=")
-				.append(formato).append(", duracion=").append(duracion).append("]");
-		return builder.toString();
+	public String toString() { //this. nos referimos a la instancia que sale de esa clase. 
+		return " Titulo: " + this.titulo + " Autor: " + this.autor + " Formato: " + this.formato + " Duracion: " + this.duracion;
 	}
 	
 	

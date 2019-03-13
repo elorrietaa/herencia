@@ -25,9 +25,7 @@ public class Disco extends Multimedia{
 
 	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Disco [generos=").append(generos).append(", toString()=").append(super.toString()).append("]").append(System.getProperty("line.separator"));
-		return builder.toString();
+		return super.toString() + "Genero: " + generos;
 	}
 	
 

@@ -1,7 +1,7 @@
 package herencia3;
 
 public class Pelicula extends Multimedia {
-	//atributos propios de Pelicula
+	//atributos propios de Pelicula // si crees que en el futuro puede ser protected podría ponerse private o protected
 	private String actorPrincipal;
 	private String actrizPrincipal;
 	
@@ -16,7 +16,7 @@ public class Pelicula extends Multimedia {
 		}
 	}
 	//método al menos un actor:
-	
+	 
 
 	//get y set
 	public String getActorPrincipal() {
@@ -34,11 +34,8 @@ public class Pelicula extends Multimedia {
 
 
 	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Pelicula [actorPrincipal=").append(actorPrincipal).append(", actrizPrincipal=")
-				.append(actrizPrincipal).append(super.toString()).append("]").append(System.getProperty("line.separator"));
-		return builder.toString();
+	public String toString() {// super.toString() sobreescribe el método toString de la clase padre: multimedia
+		return super.toString() + "Actor principal: " + actorPrincipal + "Actriz principal: " + actrizPrincipal;
 	}
 
 
