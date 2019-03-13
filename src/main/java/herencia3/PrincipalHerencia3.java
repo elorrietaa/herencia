@@ -11,29 +11,16 @@ public class PrincipalHerencia3 {
 		Pelicula pelicula1 = new Pelicula("Titulo1", "Autor1", "Formato1", 10 , "Aitor", "Ana");
 		Pelicula pelicula2 = new Pelicula("Titulo2", "Autor2", "Formato2", 20 , "Luis", "Rebeca");
 		Pelicula pelicula3 = new Pelicula("Titulo3", "Autor3", "Formato3", 30 , "Juan", "Lara");
-		
+		//se meten tres películas
 		arrayListaMultimedia.add(pelicula1);
 		arrayListaMultimedia.add(pelicula2);
 		arrayListaMultimedia.add(pelicula3);
 		
-		//para ver si las he metido
-		System.out.println("PELICULA 1:");
-		System.out.println(pelicula1.toString());
-		System.out.println("PELICULA 2:");
-		System.out.println(pelicula2.toString());
-		System.out.println("PELICULA 3:");
-		System.out.println(pelicula3.toString());
-		
-		
-		//ver todo
 		System.out.println("LISTA MULTIMEDIA:_______________________________");
 		for(int i=0;i<arrayListaMultimedia.getContador();i++) {
 			System.out.println(arrayListaMultimedia.toString(i));
 		}
 	
-		// método size: devuelve el número de objetos que hay en la lista.
-		arrayListaMultimedia.size();
-		
 		System.out.println("SEGUNDA PARTE:");
 		ListaMultimedia arrayListaMultimedia2  = new ListaMultimedia (20);
 		

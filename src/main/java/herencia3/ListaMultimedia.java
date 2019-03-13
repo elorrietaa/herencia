@@ -26,7 +26,7 @@ public class ListaMultimedia {
 		return maximoContador;
 	}
 
-	public void setMaximoContador(int contador) {
+	public void setMaximoContador(int maximoContador) {
 		this.maximoContador = maximoContador;
 	}
 	public Multimedia[] getArrayMultimedia() {
@@ -64,6 +64,24 @@ public class ListaMultimedia {
 			
 		return listaLlena;
 	}
+	
+	/* OTRA FORMA:
+	 * 
+	 public boolean add(Multimedia m) {
+		
+		if(this.multimedia.length == this.contador) {
+			return false;
+		}
+		else
+		{ 
+			arrayListaMultimedia[this.contador] = m;
+			this.contador++;
+			return true;
+		}
+	}
+	 
+	 * 
+	 */
 	
 	public Multimedia get(int posicion) {
 		return arrayListaMultimedia[posicion];
