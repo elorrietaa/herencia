@@ -15,6 +15,6 @@ public class Griego extends Guerrero{
 		@Override
 		public boolean retirarse() {
 			System.out.println("RETIRADA");
-			return super.retirarse();
+			return super.retirarse(); 
 		}
 }

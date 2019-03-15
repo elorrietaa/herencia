@@ -14,13 +14,13 @@ public class PrincipalHerencia3 {
 		//se meten tres películas
 		arrayListaMultimedia.add(pelicula1);
 		arrayListaMultimedia.add(pelicula2);
-		arrayListaMultimedia.add(pelicula3);
+		arrayListaMultimedia.add(pelicula3); 
 		
 		System.out.println("LISTA MULTIMEDIA:_______________________________");
 		for(int i=0;i<arrayListaMultimedia.getContador();i++) {
 			System.out.println(arrayListaMultimedia.toString(i));
 		}
-	
+	 
 		System.out.println("SEGUNDA PARTE:");
 		ListaMultimedia arrayListaMultimedia2  = new ListaMultimedia (20);
 		

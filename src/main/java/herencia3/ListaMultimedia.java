@@ -19,7 +19,7 @@ public class ListaMultimedia {
 	}
 
 	public void setContador(int contador) {
-		this.contador = contador;
+		this.contador = contador; 
 	}
 
 	public int getMaximoContador() {

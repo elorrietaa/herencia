@@ -23,7 +23,7 @@ public class Multimedia {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-	public String getAutor() {
+	public String getAutor() { 
 		return autor;
 	}
 	public void setAutor(String autor) {

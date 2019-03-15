@@ -54,6 +54,7 @@ public class Guerrero {
 	}
 
 	public boolean isHerido() {
+		herido=true;
 		return herido;
 	}
 
@@ -62,6 +63,7 @@ public class Guerrero {
 	}
 
 	public boolean isMuerto() {
+		muerto=true;
 		return muerto;
 	}
 
@@ -69,7 +71,7 @@ public class Guerrero {
 		this.muerto = muerto;
 	}
 	
-	//métodos
+	//métodos 
 	public boolean retirarse() {
 		boolean decisionRetirarse=false;
 		return decisionRetirarse;
@@ -102,4 +104,10 @@ public class Guerrero {
 		return fuerzaValidada;
 	}
 
+	@Override
+	public String toString() {
+		return "Guerrero:" + " Nombre: " + nombre + " Edad: " + edad+ " Fuerza: "+ fuerza+ " Herido: " + herido + "Muerto:" + muerto;
+	}
+
+	
 }

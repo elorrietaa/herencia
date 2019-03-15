@@ -27,7 +27,7 @@ public class Pelicula extends Multimedia {
 	}
 	public String getActrizPrincipal() {
 		return actrizPrincipal;
-	}
+	} 
 	public void setActrizPrincipal(String actrizPrincipal) {
 		this.actrizPrincipal = actrizPrincipal;
 	}
