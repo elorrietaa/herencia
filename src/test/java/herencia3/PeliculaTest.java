@@ -21,7 +21,7 @@ public class PeliculaTest {
 		assertEquals(actrizPrincipal, peliculaPrueba.getActrizPrincipal());
 	}
  
-	@Test
+	@Test 
 	public void testActorPrincipal() {
 		peliculaPrueba.setActorPrincipal(actorPrincipal);
 		assertEquals(actorPrincipal, peliculaPrueba.getActorPrincipal());

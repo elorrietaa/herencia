@@ -11,7 +11,7 @@ public class DiscoTest {
 	private float duracion = 120;
 	private String generos = "ROCK";
 	private Disco disco = new Disco(titulo, autor, formato, duracion, generos);
-	
+	 
 	@Test
 	public void testConstructorDisco() {
 		Disco discoPrueba = new Disco(titulo, autor, formato, duracion, generos);	
@@ -20,8 +20,8 @@ public class DiscoTest {
 	}
 	@Test
 	public void testGeneros() {
-		disco.setGeneros(generos);
-		assertEquals(generos,disco.getGeneros());
+		disco.setGeneros(generos); 
+		assertEquals(generos,disco.getGeneros()); 
 	}
 	
 	@Test
