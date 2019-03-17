@@ -9,7 +9,7 @@ public class Guerrero {
 	protected boolean muerto;
 	
 	//constructor
-	public Guerrero(String nombre, int edad, int fuerza) {
+	public Guerrero(String nombre, int edad, int fuerza) { 
 		super();
 		this.nombre = nombre;
 		if (comprobarEdad(edad)==true) {

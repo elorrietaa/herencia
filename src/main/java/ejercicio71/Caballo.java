@@ -42,14 +42,13 @@ public class Caballo {
 	//métodos:
 	public int buscar(String nombre) {
 		int posicion=-1;
-		for(int i=0; i<ocupantes.length;i++) {
+		for(int i=0; i<this.ocupacion;i++) {
 			if(nombre.equals(ocupantes[i].getNombre())) {
 				posicion=i;
-			}
-			else {
-				posicion=-1;
-			}
+				System.out.println(ocupantes[i].getNombre() + "Existe");
+			}  
 		}
+		
 		return posicion;
 		
 	}
@@ -59,7 +58,7 @@ public class Caballo {
 			System.out.println("El guerrero no existe");
 		}
 		else {
-				System.out.println(ocupantes[pos].toString());
+				System.out.println("El guerrero: "+ ocupantes[pos].getNombre() + "Existe. Su posicion es:" +pos+ "Datos: " +ocupantes[pos].toString());
 			}
 	}
 	
@@ -81,7 +80,7 @@ public class Caballo {
 				
 				ocupantes[ocupacion] = guerrero;
 				this.ocupacion=ocupacion+1;
-				System.out.println("Guerrero Griego"+ guerrero.getNombre() + "montado en caballo");
+				System.out.println("Guerrero Griego"+ guerrero.getNombre() + " montado en caballo");
 			}
 		}
 		else if(guerrero instanceof Troyano) {
@@ -93,7 +92,7 @@ public class Caballo {
 	
 	
 	public String mostrarCaballo(int pos) {
-		return "Caballo: " + "Capacidad:" + capacidad + "Ocupacion: " + ocupacion + "Lista ocupantes: " + ocupantes[pos] ;
+		return "Caballo: " + " Capacidad:" + capacidad + " Ocupacion: " + ocupacion + " Lista ocupantes: " + ocupantes[pos] ;
 	}
 
 	
