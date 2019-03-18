@@ -60,5 +60,10 @@ public class GuerreroTest {
 			guerrero.isMuerto();
 			guerrero.setMuerto(muerto);
 		}
+		@Test
+		public final void testRetirarse() {
+			assertEquals(false, guerrero.retirarse());
+		}
+		
 		
 }
