@@ -41,8 +41,10 @@ public class GuerraTroya {
 		Troyano troyano1 = new Troyano("Paris",15,7);
 		//9.    Montarlo en el caballo y comprobar que no es posible.
 		caballo1.montarseEnCaballo(troyano1);
-		
-		
+		//10. Borrar un guerrero por posicion
+		caballo1.borrarGuerreroPosicion("Agamenon");
+		//11. Ordenar el caballo. Ordenar los guerreros por fuerza
+		caballo1.ordenarCaballoDes();
 	}
  
 }

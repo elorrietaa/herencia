@@ -62,8 +62,6 @@ public class Caballo {
 			}
 	}
 	
-	
-	
 	public void montarseEnCaballo(Guerrero guerrero) {
 		boolean caballoLleno=false;
 		//varias formas:
@@ -90,6 +88,36 @@ public class Caballo {
 		}
 	}
 	
+	public void borrarGuerreroPosicion(String nombre) {
+		int posicionGuerrero=buscar(nombre);
+    	for(int i=posicionGuerrero;i<this.ocupacion;i++) {
+    			ocupantes[i] = ocupantes[i+1];
+    	}
+    	this.ocupacion=this.ocupacion-1;  	
+    	System.out.println("El array ocupantes después de eliminar una posición se queda:");
+    	for(int i=0;i<ocupacion;i++) {
+    		System.out.println(ocupantes[i]);
+    	}
+	}
+	
+	public void ordenarCaballoDes() {
+        for(int i=ocupacion; i>0;i--) {
+            for(int j=0;j<i-1;j++) {
+                if (ocupantes[j].getFuerza()<ocupantes[j+1].getFuerza()) {
+                    Guerrero aux;
+                    aux=ocupantes[j+1];
+                    ocupantes[j+1]=ocupantes[j];
+                    ocupantes[j]=aux;
+                }
+            }
+        }
+        System.out.println("--------------------------------------------");
+        System.out.println("El caballo ordenado en Descendiente por la fuerza es:");
+        for(int i=0;i<this.ocupacion; i++) {
+        	System.out.println(mostrarCaballo(i));
+        }
+        System.out.println("--------------------------------------------");
+    }
 	
 	public String mostrarCaballo(int pos) {
 		return "Caballo: " + " Capacidad:" + capacidad + " Ocupacion: " + ocupacion + " Lista ocupantes: " + ocupantes[pos] ;
