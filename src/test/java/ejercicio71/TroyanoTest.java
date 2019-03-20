@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class GriegoTest extends GuerreroTest {
+public class TroyanoTest extends GuerreroTest {
 	protected String nombre="Guerrero1";
 	protected int edad=23;
 	protected int fuerza=5;
@@ -12,7 +12,7 @@ public class GriegoTest extends GuerreroTest {
 	protected boolean muerto=false;
 	
 	protected Guerrero guerrero = new Guerrero(nombre, edad, fuerza);
-	Griego griegoprueba = new Griego(nombre, edad, fuerza);
+	Troyano troyanoprueba = new Troyano(nombre, edad, fuerza);
 
 	@Test
 	public final void testConstructor() {
@@ -24,7 +24,7 @@ public class GriegoTest extends GuerreroTest {
 	
 	@Test
 	public  void testRetirarse() {
-		Griego griegoprueba2 = new Griego(); 
+		Griego griegoprueba2 = new Griego();
 		assertEquals(griegoprueba2.retirarse(), false);
 	}
 }

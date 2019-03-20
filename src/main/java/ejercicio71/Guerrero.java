@@ -10,7 +10,6 @@ public class Guerrero {
 	
 	//constructor
 	public Guerrero(String nombre, int edad, int fuerza) { 
-		super();
 		this.nombre = nombre;
 		if (comprobarEdad(edad)==true) {
 			this.edad = edad;

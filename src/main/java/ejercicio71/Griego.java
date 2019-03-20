@@ -18,4 +18,4 @@ public class Griego extends Guerrero{
 			System.out.println("RETIRADA");
 			return super.retirarse();  
 		}
-}
+} 
