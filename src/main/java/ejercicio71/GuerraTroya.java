@@ -43,8 +43,15 @@ public class GuerraTroya {
 		caballo1.montarseEnCaballo(troyano1);
 		//10. Borrar un guerrero por posicion
 		caballo1.borrarGuerreroPosicion("Agamenon");
+		//ver El guerrero Agamenon: (Al que hemos herido y matado.
+		System.out.println(griego2);
+		
 		//11. Ordenar el caballo. Ordenar los guerreros por fuerza
 		caballo1.ordenarCaballoDes();
+		
+		
+		
 	}
  
+	
 }

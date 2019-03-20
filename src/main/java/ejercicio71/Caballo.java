@@ -6,15 +6,12 @@ public class Caballo {
 	private int ocupacion; //representa el número actual de griegos en el caballo.
 	private Guerrero [] ocupantes; //array de objetos de la clase Guerrero.
 
-
 	//constructor:
 	public Caballo(int capacidad) {
 		this.capacidad=capacidad;
 		this.ocupacion=0;
 		this.ocupantes = new Guerrero [capacidad];
 	}
-	
-	
 	
 	//get y set:
 	public void setCapacidad(int capacidad) {
@@ -66,7 +63,8 @@ public class Caballo {
 		boolean caballoLleno=false;
 		//varias formas:
 		//1º instanceof
-		//Poniendo un atributo boolean esTroyano=true;
+		//Poniendo un atributo boolean esTroyano=true; otra forma: if(guerrero.getType().equals("Troyano")){}
+		//if(guerrero.getClass().equals(Griego.class))
 		if(guerrero instanceof Griego) {
 			
 			if(this.ocupacion >= this.capacidad) {
@@ -75,12 +73,12 @@ public class Caballo {
 			}
 			else { 
 				caballoLleno = false;
-				
 				ocupantes[ocupacion] = guerrero;
 				this.ocupacion=ocupacion+1;
 				System.out.println("Guerrero Griego"+ guerrero.getNombre() + " montado en caballo");
 			}
 		}
+		//if(guerrero.getClass().equals(Troyano.class))
 		else if(guerrero instanceof Troyano) {
 			System.out.println("Atención! Guerrero Troyano "+ guerrero.getNombre() +" Intendando acceder al caballo");
 			//matar guerrero
@@ -90,6 +88,10 @@ public class Caballo {
 	
 	public void borrarGuerreroPosicion(String nombre) {
 		int posicionGuerrero=buscar(nombre);
+		
+		ocupantes[posicionGuerrero].setHerido(true);
+		ocupantes[posicionGuerrero].setMuerto(true);
+		
     	for(int i=posicionGuerrero;i<this.ocupacion;i++) {
     			ocupantes[i] = ocupantes[i+1];
     	}

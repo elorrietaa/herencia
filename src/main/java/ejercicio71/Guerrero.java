@@ -29,7 +29,7 @@ public class Guerrero {
 	}
 
 	//get y set
-	public String getNombre() {
+	public String getNombre() { 
 		return nombre;
 	}
 
@@ -54,7 +54,7 @@ public class Guerrero {
 	}
 
 	public boolean isHerido() {
-		herido=true;
+		this.herido=true;
 		return herido;
 	}
 

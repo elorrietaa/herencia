@@ -2,6 +2,7 @@ package ejercicio71;
 
 public class Troyano extends Guerrero{
 	//atributos
+	private String TYPE="Troyano";
 	//constructor1
 	public Troyano(String nombre, int edad, int fuerza) {
 		super(nombre, edad, fuerza);

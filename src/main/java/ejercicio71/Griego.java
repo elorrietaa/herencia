@@ -2,6 +2,7 @@ package ejercicio71;
 
 public class Griego extends Guerrero{
 	//atributos
+	private String TYPE="Griego";
 		//constructor1
 		public Griego(String nombre, int edad, int fuerza) {
 			super(nombre, edad, fuerza);
@@ -15,6 +16,6 @@ public class Griego extends Guerrero{
 		@Override
 		public boolean retirarse() {
 			System.out.println("RETIRADA");
-			return super.retirarse(); 
+			return super.retirarse();  
 		}
 }
