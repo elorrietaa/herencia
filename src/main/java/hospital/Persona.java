@@ -1,6 +1,7 @@
 package hospital;
 
-import java.sql.Date;
+import java.util.Date;
+import java.util.Scanner;
 
 public class Persona {
 	//atributos:
@@ -70,7 +71,38 @@ public class Persona {
 		this.ciudad = ciudad;
 	}
 	
-	
+	//métodos
+	public Persona[] CargarDatos(Scanner reader, LeerDatos leerDatos) {
+		
+		//Declaracion e inicialización de variables
+		Persona [] arrayPersonas = null;
+		String dni;
+		String nombre;
+		String apellido;
+		Date fechaNac;
+		String direccion;
+		String ciudad;
+		int numeroPersonas = 0;
+		//Inicio de programa
+		numeroPersonas = leerDatos.RecogerOpcionInt(reader,0,100,"¿cuantas personas va a introducir? ");
+		arrayPersonas = new Persona[numeroPersonas];
+		
+		for(int i = 0;i<numeroPersonas;i++)
+		{
+			dni= leerDatos.IntroducirYValidarFormatoDNI(reader);
+			nombre = leerDatos.IntroducirTexto(reader, "Introduzca nombre: ");
+			apellido = leerDatos.IntroducirTexto(reader, "Introduzca apellido: ");
+			fechaNac= leerDatos.IntroducirYValidarFecha(reader);
+			direccion = leerDatos.IntroducirTexto(reader, "Introduzca dirección: ");
+			ciudad = leerDatos.IntroducirTexto(reader, "Introduzca ciudad: ");
+			
+			Persona persona = new Persona(dni, nombre, apellido, fechaNac, direccion, ciudad);
+			arrayPersonas[i] = persona;
+		}
+		
+		return arrayPersonas;
+	}
+
 	
 	
 }

@@ -26,7 +26,7 @@ public class MultimediaTest {
 	}
 	
 	@Test
-	public void testTitulo() {
+	public void testTitulo() { 
 		multimedia.setTitulo(titulo);
 		assertEquals(titulo,multimedia.getTitulo());
 	}

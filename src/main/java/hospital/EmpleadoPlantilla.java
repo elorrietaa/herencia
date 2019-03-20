@@ -1,5 +1,7 @@
 package hospital;
 
+import java.util.Date;
+
 public class EmpleadoPlantilla extends Empleado {
 	
 	//atributos
@@ -7,10 +9,11 @@ public class EmpleadoPlantilla extends Empleado {
 	protected float porcentajeHoraExtra;
 	
 	//constructor:
-	public EmpleadoPlantilla(String dni, String nombre, String apellido, String fechaNac, String direccion,
-			String ciudad) {
+	public EmpleadoPlantilla(String dni, String nombre, String apellido, Date fechaNac, String direccion,
+			String ciudad, float salarioMensual, float porcentajeHoraExtra) {
 		super(dni, nombre, apellido, fechaNac, direccion, ciudad);
-		// TODO Auto-generated constructor stub
+		this.salarioMensual=salarioMensual;
+		this.porcentajeHoraExtra=porcentajeHoraExtra;
 	}
 
 	//get y set 

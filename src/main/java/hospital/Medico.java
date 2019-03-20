@@ -1,5 +1,7 @@
 package hospital;
 
+import java.util.Date;
+
 public class Medico extends EmpleadoPlantilla {
 	//atributos:
 	protected String especialidad;
@@ -7,18 +9,20 @@ public class Medico extends EmpleadoPlantilla {
 	protected int numeroConsultorio;
 	
 	//constructor:
-	public Medico(String dni, String nombre, String apellido, String fechaNac, String direccion, String ciudad,
-			String especialidad, String servicio, int numeroConsultorio) {
-		super(dni, nombre, apellido, fechaNac, direccion, ciudad);
-		this.especialidad = especialidad;
-		this.servicio = servicio;
-		this.numeroConsultorio = numeroConsultorio;
+	public Medico(String dni, String nombre, String apellido, Date fechaNac, String direccion, String ciudad,
+			float salarioMensual, float porcentajeHoraExtra, String especialidad,String servicio, int numeroConsultorio ) {
+		super(dni, nombre, apellido, fechaNac, direccion, ciudad, salarioMensual, porcentajeHoraExtra);
+		this.especialidad=especialidad;
+		this.servicio=servicio;
+		this.numeroConsultorio=numeroConsultorio;
 	}
 
 	//get y set
 	public String getEspecialidad() {
 		return especialidad;
 	}
+
+	
 
 	public void setEspecialidad(String especialidad) {
 		this.especialidad = especialidad;
