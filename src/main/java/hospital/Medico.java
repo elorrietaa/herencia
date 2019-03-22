@@ -2,6 +2,8 @@ package hospital;
 
 import java.util.Date;
 
+import ejercicio71.Guerrero;
+
 public class Medico extends EmpleadoPlantilla {
 	//atributos:
 	protected String especialidad;
@@ -9,7 +11,7 @@ public class Medico extends EmpleadoPlantilla {
 	protected int numeroConsultorio;
 	
 	//constructor:
-	public Medico(String dni, String nombre, String apellido, Date fechaNac, String direccion, String ciudad,
+	public Medico(String dni, String nombre, String apellido, String fechaNac, String direccion, String ciudad,
 			float salarioMensual, float porcentajeHoraExtra, String especialidad,String servicio, int numeroConsultorio ) {
 		super(dni, nombre, apellido, fechaNac, direccion, ciudad, salarioMensual, porcentajeHoraExtra);
 		this.especialidad=especialidad;
@@ -43,7 +45,25 @@ public class Medico extends EmpleadoPlantilla {
 	public void setNumeroConsultorio(int numeroConsultorio) {
 		this.numeroConsultorio = numeroConsultorio;
 	}
-	
 
+	//métodos:
+	public void ordenarEspecialidadDes(Medico[] arrayMedicos) {
+        for(int i=arrayMedicos.length; i>0;i--) {
+            for(int j=0;j<i-1;j++) {
+                if (arrayMedicos[j].getNumeroConsultorio()<arrayMedicos[j+1].getNumeroConsultorio()) {
+                	Medico aux;
+                    aux=arrayMedicos[j+1];
+                    arrayMedicos[j+1]=arrayMedicos[j];
+                    arrayMedicos[j]=aux;
+                }
+            }
+        }
+        System.out.println("--------------------------------------------");
+        System.out.println("3)	Listar los datos de los médicos ordenados en forma descendente por la especialidad.:");
+        for(int i=0;i<arrayMedicos.length; i++) {
+        	System.out.println(arrayMedicos[i].getNombre()+" "+arrayMedicos[i].getEspecialidad()+" "+arrayMedicos[i].getNumeroConsultorio());
+        }
+        System.out.println("--------------------------------------------");
+    }
 	
 }

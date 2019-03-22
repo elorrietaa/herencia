@@ -1,7 +1,5 @@
 package hospital;
 
-import java.util.Date;
-
 public class Paciente extends Persona {
 	//atributos:
 	protected int numHistoria;
@@ -10,7 +8,7 @@ public class Paciente extends Persona {
 	protected String [] listaMedicamentos;
 	
 	//constructor:
-	public Paciente(String dni, String nombre, String apellido, Date fechaNac, String direccion, String ciudad) {
+	public Paciente(String dni, String nombre, String apellido, String fechaNac, String direccion, String ciudad, int numHistoria, char sexo, String grupoSanguineo, String [] listaMedicamentos) {
 		super(dni, nombre, apellido, fechaNac, direccion, ciudad);
 		this.numHistoria=numHistoria;
 		this.sexo=sexo;

@@ -1,6 +1,9 @@
 package hospital;
 
+import java.util.Date;
 import java.util.Scanner;
+
+import ejercicio71.Guerrero;
 
 public class PrincipalHospital {
 
@@ -8,33 +11,43 @@ public class PrincipalHospital {
 		// TODO Auto-generated method stub
 	LeerDatos leerDatos = new LeerDatos();
 	Scanner reader = new Scanner(System.in);
-	FuncionesHospital funciones = new FuncionesHospital();
-	EmpleadoPlantilla [] arrayEmpleadosPlantilla =null;
-	EmpleadoEventual [] arrayEmpleadosEventuales =null;
-	Medico [] arrayMedicos =null;
-	Paciente [] arrayPacientes=null;
-	
-	int opcion = -1;
-	
-	//Inicio de programa
-			while (opcion !=0)
-			{
-				switch (opcion) {
-					case 1: alumnos = funciones.CargarDatos(reader, leerDatos);
-						break;
-					case 2: if(alumnos != null) funciones.ProcesarDatos(alumnos);
-						break;
-					case 3: if(alumnos != null) funciones.MostrarDatos(alumnos);
-						break;
-					case 4: if(alumnos != null) funciones.MostrarDatosAlumno(alumnos,reader);
-					break;
-		
-				}
-				funciones.MostrarMenu();
-				opcion = leerDatos.RecogerOpcionInt(reader,0,4, "Introduce una opción: ");
-			}
-			
-			reader.close();
-	}
+	Medico medico = new Medico(null, null, null, null, null, null, 0, 0, null, null, 0);
+	//1)	Registrar los datos de los empleados, los pacientes y los médicos.
+	//Registramos empleados:
+	EmpleadoPlantilla empleadoPlantilla1 = new EmpleadoPlantilla("22258295A", "Ana", "Fernández", "22-10-2019", "Calle 1", "Barakaldo", 3000, 120);
+	EmpleadoPlantilla empleadoPlantilla2 = new EmpleadoPlantilla("22258296B", "Juan", "Fernández", "23-10-2019", "Calle 2", "Barakaldo", 3000, 120);
+	EmpleadoPlantilla empleadoPlantilla3 = new EmpleadoPlantilla("22258296C", "Juan", "Fernández", "23-10-2019", "Calle 2", "Barakaldo", 3000, 120);
 
+	//Registramos pacientes:
+	String [] listaMedicamentos1= {"Paracetamol", "Ibuprofeno"};
+	Paciente paciente1 = new Paciente("22258295A", "Paciente1","Apellido1","18-04-1955", "Calle 1", "Barakaldo", 1, 'M' , "A+",listaMedicamentos1);
+	String [] listaMedicamentos2= {"Paracetamol", "Ibuprofeno", "Paracetamol"};
+	Paciente paciente2 = new Paciente("22258295B", "Paciente2","Apellido2","18-04-1965", "Calle 1", "Barakaldo", 1, 'M' , "A+",listaMedicamentos2);
+	String [] listaMedicamentos3= {"Paracetamol", "Ibuprofeno", "Paracetamol", "Fastum"};
+	Paciente paciente3 = new Paciente("22258295C", "Paciente3","Apellido3","18-04-1975", "Calle 1", "Barakaldo", 1, 'H' , "A+",listaMedicamentos3);
+	String [] listaMedicamentos4= {"Paracetamol", "Ibuprofeno", "Paracetamol", "Fastum"};
+	Paciente paciente4 = new Paciente("22258295D", "Paciente4","Apellido4","18-04-1975", "Calle 1", "Barakaldo", 1, 'H' , "A+",listaMedicamentos3);
+	String [] listaMedicamentos5= {"Paracetamol", "Ibuprofeno", "Paracetamol", "Fastum"};
+	Paciente paciente5 = new Paciente("22258295E", "Paciente5","Apellido5","18-04-1975", "Calle 1", "Barakaldo", 1, 'H' , "A+",listaMedicamentos3);
+	//Registramos médicos:
+	Medico medico1 = new Medico("11111111M", "Medico1", "ApellidoM1", "18-04-1975", "Calle 1", "Barakaldo", 5000, 200, "Cirugía" ,"Cirujano", 1 );
+	Medico medico2 = new Medico("22222222M", "Medico2", "ApellidoM2", "18-04-1975", "Calle 1", "Barakaldo", 5000, 200, "Oftalmología" ,"Oftalmólogo", 3 );
+	Medico medico3 = new Medico("33333333M", "Medico3", "ApellidoM3", "18-04-1975", "Calle 1", "Barakaldo", 5000, 200, "Dermatología" ,"Dermatólogo", 2 );
+
+	//Rellenamos los arrays:
+	EmpleadoPlantilla [] arrayEmpleadosPlantilla = {empleadoPlantilla1, empleadoPlantilla2, empleadoPlantilla3};
+	EmpleadoEventual [] arrayEmpleadosEventuales =null;
+	Paciente [] arrayPacientes={paciente1, paciente2, paciente3, paciente4, paciente5};
+	Medico [] arrayMedicos = {medico1, medico2, medico3};
+
+	//2)	Registrar los datos de una cita médica.
+	
+	//3)	Listar los datos de los médicos ordenados en forma descendente por la especialidad.
+	medico.ordenarEspecialidadDes(arrayMedicos);
+	//4)	Listar los datos (nombres y apellidos) de los pacientes atendidos por un médico determinado (ingresando su código)
+
+	
+	}
+	
+	
 }
