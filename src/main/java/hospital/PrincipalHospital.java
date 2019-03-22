@@ -1,9 +1,6 @@
 package hospital;
 
-import java.util.Date;
 import java.util.Scanner;
-
-import ejercicio71.Guerrero;
 
 public class PrincipalHospital {
 
@@ -12,6 +9,7 @@ public class PrincipalHospital {
 	LeerDatos leerDatos = new LeerDatos();
 	Scanner reader = new Scanner(System.in);
 	Medico medico = new Medico(null, null, null, null, null, null, 0, 0, null, null, 0);
+	FuncionesHospital funciones = new FuncionesHospital();
 	//1)	Registrar los datos de los empleados, los pacientes y los médicos.
 	//Registramos empleados:
 	EmpleadoPlantilla empleadoPlantilla1 = new EmpleadoPlantilla("22258295A", "Ana", "Fernández", "22-10-2019", "Calle 1", "Barakaldo", 3000, 120);
@@ -41,6 +39,10 @@ public class PrincipalHospital {
 	Medico [] arrayMedicos = {medico1, medico2, medico3};
 
 	//2)	Registrar los datos de una cita médica.
+	
+	String servicioIntroducido;
+	servicioIntroducido=leerDatos.IntroducirTexto(reader, "¿En qué servicio desea pedir cita?: ");
+	
 	
 	//3)	Listar los datos de los médicos ordenados en forma descendente por la especialidad.
 	medico.ordenarEspecialidadDes(arrayMedicos);
