@@ -1,9 +1,5 @@
 package hospital;
 
-import java.util.Date;
-
-import ejercicio71.Guerrero;
-
 public class Medico extends EmpleadoPlantilla {
 	//atributos:
 	protected String especialidad;
@@ -50,7 +46,7 @@ public class Medico extends EmpleadoPlantilla {
 	public void ordenarEspecialidadDes(Medico[] arrayMedicos) {
         for(int i=arrayMedicos.length; i>0;i--) {
             for(int j=0;j<i-1;j++) {
-                if (arrayMedicos[j].getNumeroConsultorio()<arrayMedicos[j+1].getNumeroConsultorio()) {
+                if (arrayMedicos[j].getEspecialidad().compareTo(arrayMedicos[j+1].getEspecialidad())<0) {
                 	Medico aux;
                     aux=arrayMedicos[j+1];
                     arrayMedicos[j+1]=arrayMedicos[j];

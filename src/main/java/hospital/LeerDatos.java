@@ -125,12 +125,34 @@ public class LeerDatos {
 				dniValidado=true;
 			}	
 			else {
-				System.out.println("El formato del dni NO es valido. por favor, introduzca un formato válido.");
+				System.out.println("El formato del dni NO es valido. Por favor, introduzca un formato válido.");
 				dniValidado=false;
 			}
 		}
-		
 		return dni;
+	}
+	
+	public int ComprobarDNIExistente (Scanner reader, Paciente [] paciente) {
+		int posPaciente = -1;
+		boolean pacienteExiste=false;
+		String dni=IntroducirYValidarFormatoDNI(reader);
+		
+		while(!pacienteExiste) {
+			for(int i=0; i<paciente.length; i++) {
+				if(dni.equals(paciente[i].dni)) {
+					posPaciente=i;
+					pacienteExiste=true;
+					break;
+				}
+				else {
+					System.out.println("El DNI introducido no pertenece a ningún paciente registrado.Por favor, introduzca un DNI válido.");
+					pacienteExiste=false;
+				}
+			}
+			
+		}
+		
+		return posPaciente;
 	}
 	
 	public Date IntroducirYValidarFecha (Scanner reader) {

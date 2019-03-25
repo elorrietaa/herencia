@@ -47,6 +47,12 @@ public class Cita {
 		this.horaCita = horaCita;
 	}
 	
-	
+	//métodos:
+	public String imprimirCita() {
+		String verCita="";
+		verCita="Paciente: " + pacienteCita.nombre + "Médico: " + medicoCita.nombre + "Fecha de la cita: " + this.fechaCita + "Hora cita: " + this.horaCita;
+		return verCita;
+		
+	}
 	
 }

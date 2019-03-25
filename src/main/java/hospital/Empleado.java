@@ -1,6 +1,5 @@
 package hospital;
 
-import java.util.Date;
 
 public class Empleado extends Persona {
 

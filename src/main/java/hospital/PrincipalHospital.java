@@ -24,9 +24,9 @@ public class PrincipalHospital {
 	String [] listaMedicamentos3= {"Paracetamol", "Ibuprofeno", "Paracetamol", "Fastum"};
 	Paciente paciente3 = new Paciente("22258295C", "Paciente3","Apellido3","18-04-1975", "Calle 1", "Barakaldo", 1, 'H' , "A+",listaMedicamentos3);
 	String [] listaMedicamentos4= {"Paracetamol", "Ibuprofeno", "Paracetamol", "Fastum"};
-	Paciente paciente4 = new Paciente("22258295D", "Paciente4","Apellido4","18-04-1975", "Calle 1", "Barakaldo", 1, 'H' , "A+",listaMedicamentos3);
+	Paciente paciente4 = new Paciente("22258295D", "Paciente4","Apellido4","18-04-1975", "Calle 1", "Barakaldo", 1, 'H' , "A+",listaMedicamentos4);
 	String [] listaMedicamentos5= {"Paracetamol", "Ibuprofeno", "Paracetamol", "Fastum"};
-	Paciente paciente5 = new Paciente("22258295E", "Paciente5","Apellido5","18-04-1975", "Calle 1", "Barakaldo", 1, 'H' , "A+",listaMedicamentos3);
+	Paciente paciente5 = new Paciente("22258295E", "Paciente5","Apellido5","18-04-1975", "Calle 1", "Barakaldo", 1, 'H' , "A+",listaMedicamentos5);
 	//Registramos médicos:
 	Medico medico1 = new Medico("11111111M", "Medico1", "ApellidoM1", "18-04-1975", "Calle 1", "Barakaldo", 5000, 200, "Cirugía" ,"Cirujano", 1 );
 	Medico medico2 = new Medico("22222222M", "Medico2", "ApellidoM2", "18-04-1975", "Calle 1", "Barakaldo", 5000, 200, "Oftalmología" ,"Oftalmólogo", 3 );
@@ -37,17 +37,24 @@ public class PrincipalHospital {
 	EmpleadoEventual [] arrayEmpleadosEventuales =null;
 	Paciente [] arrayPacientes={paciente1, paciente2, paciente3, paciente4, paciente5};
 	Medico [] arrayMedicos = {medico1, medico2, medico3};
-
+	
 	//2)	Registrar los datos de una cita médica.
 	
 	String servicioIntroducido;
 	servicioIntroducido=leerDatos.IntroducirTexto(reader, "¿En qué servicio desea pedir cita?: ");
+	Cita cita1=funciones.pedirCita(reader, servicioIntroducido, arrayMedicos, arrayPacientes);
+	Cita cita2= new Cita(paciente1, medico1, "18-04-2018", "12:45");
+	Cita [] arrayCitas = {cita1};
+	for(int i=0; i<arrayCitas.length;i++) {
+		System.out.println(arrayCitas[i].imprimirCita());
+	}
 	
 	
 	//3)	Listar los datos de los médicos ordenados en forma descendente por la especialidad.
 	medico.ordenarEspecialidadDes(arrayMedicos);
 	//4)	Listar los datos (nombres y apellidos) de los pacientes atendidos por un médico determinado (ingresando su código)
-
+	String medicoIntroducido;
+	medicoIntroducido=leerDatos.IntroducirTexto(reader, "Nombre médico determinado: ");
 	
 	}
 	
