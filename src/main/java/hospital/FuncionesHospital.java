@@ -27,11 +27,11 @@ public class FuncionesHospital {
 		return cita1;
 	}
 	
-	public Cita listarDatosMedicoDeterminado(Scanner reader, String servicioIntroducido, Medico [] arrayMedico, Paciente [] arrayPaciente) {
+	public Cita listarDatosMedicoDeterminado(Scanner reader, String medicoIntroducido, Cita [] arrayCitas, Medico [] arrayMedico, Paciente [] arrayPaciente) {
 		Cita cita1 = null;
 		
-		for(int i=0; i<arrayMedico.length; i++) {
-			if(servicioIntroducido.equals(arrayMedico[i].getServicio())){
+		for(int i=0; i<arrayCitas.length; i++) {
+			if(medicoIntroducido.equals(arrayMedico[i].getNombre())){
 			 //introducir Datos cita
 				
 				int posPaciente=leerDatos.ComprobarDNIExistente(reader, arrayPaciente);

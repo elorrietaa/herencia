@@ -26,7 +26,8 @@ public class PrincipalHospital {
 	String [] listaMedicamentos4= {"Paracetamol", "Ibuprofeno", "Paracetamol", "Fastum"};
 	Paciente paciente4 = new Paciente("22258295D", "Paciente4","Apellido4","18-04-1975", "Calle 1", "Barakaldo", 1, 'H' , "A+",listaMedicamentos4);
 	String [] listaMedicamentos5= {"Paracetamol", "Ibuprofeno", "Paracetamol", "Fastum"};
-	Paciente paciente5 = new Paciente("22258295E", "Paciente5","Apellido5","18-04-1975", "Calle 1", "Barakaldo", 1, 'H' , "A+",listaMedicamentos5);
+	Paciente paciente5 = new Paciente(""
+			+ "", "Paciente5","Apellido5","18-04-1975", "Calle 1", "Barakaldo", 1, 'H' , "A+",listaMedicamentos5);
 	//Registramos médicos:
 	Medico medico1 = new Medico("11111111M", "Medico1", "ApellidoM1", "18-04-1975", "Calle 1", "Barakaldo", 5000, 200, "Cirugía" ,"Cirujano", 1 );
 	Medico medico2 = new Medico("22222222M", "Medico2", "ApellidoM2", "18-04-1975", "Calle 1", "Barakaldo", 5000, 200, "Oftalmología" ,"Oftalmólogo", 3 );

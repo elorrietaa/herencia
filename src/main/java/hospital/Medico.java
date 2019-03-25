@@ -43,6 +43,7 @@ public class Medico extends EmpleadoPlantilla {
 	}
 
 	//métodos:
+	//Ordena alfabeticamente de menor a mayor
 	public void ordenarEspecialidadDes(Medico[] arrayMedicos) {
         for(int i=arrayMedicos.length; i>0;i--) {
             for(int j=0;j<i-1;j++) {
