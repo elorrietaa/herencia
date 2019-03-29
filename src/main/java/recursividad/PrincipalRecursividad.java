@@ -51,10 +51,19 @@ public class PrincipalRecursividad {
 			recursividad1.MostrarMaximo(cadenaEnterosDos);
 			
 		//Ejercicio8. Crea una funcion recursiva que devuelva un string del reves
-		String palabra="Hola";
-		String palabraAlreves;
-		palabraAlreves=recursividad1.reverse(palabra);
+		String [] palabra= {"H", "O", "L", "A"};
+		String [] palabraAlreves = new String [palabra.length];
+		System.out.println("Ejercicio8. Crea una funcion recursiva que devuelva un string del reves");
+		//palabraAlreves=recursividad1.reverse(String [] palabra);
 		System.out.println(palabraAlreves);
+		
+		//Ejercicio9. Crea una funcion recursiva que devuelva el numero binario de un numero entero cualquiera
+		int numeroBinario=0;
+		System.out.println("Ejercicio9. Crea una funcion recursiva que devuelva el numero binario de un numero entero cualquiera");
+		//numeroBinario=recursividad1.binario(8);
+		System.out.println(numeroBinario);
+		
+		 
 		
 	}
 

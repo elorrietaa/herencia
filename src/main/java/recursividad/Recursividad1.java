@@ -76,13 +76,14 @@ public class Recursividad1 {
 	}
 //maaaaaaaaaaaaaaaal	
 	public int DevolverSumaDigitos(int numero) {
-		if((numero%10)*10<1) {
+	
+		if(numero/10==0) {
 			System.out.println("resultadooo "+numero);
 			return numero;
 		}
 		else {
 			System.out.println(numero);
-			return numero+DevolverSumaDigitos((numero%10)*10);
+			return (numero/10)+DevolverSumaDigitos(numero/10);
 		}
 	}
 	
@@ -108,6 +109,7 @@ public class Recursividad1 {
 		}
 	}
 */	
+	
 	public void MostrarMaximo(int[] lista) {
 		
 		if(lista.length==1) {
@@ -123,13 +125,22 @@ public class Recursividad1 {
 		}
 	}
 //mal	
-	public String reverse(String palabra) {
-		int palabramedida=palabra.length();
-		 if (palabra.length() == 1)
-		   return palabra;
-		 else 
-		   return reverse(palabra.substring(1))+palabra;
+	public String [] reverse(String [] palabra) {
+		return reverse(palabra);
 		}
-
+/*
+	public int binario(int numero) {
+		String numeroBinarioString = null;
+		int numeroBinario=0;
+		if(numero/2==0) {
+			return 0;
+		}
+		else {
+			numeroBinarioString = numeroBinarioString + binario(numero/2);
+			//numeroBinario=(int) numeroBinarioString;
+		}
+		
+	}
+	*/
 	
 }
