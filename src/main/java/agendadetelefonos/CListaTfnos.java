@@ -15,9 +15,14 @@ public class CListaTfnos {
 		listaTelefonos.add(objeto);
 	}
 	
-	public boolean eliminar(String telBuscado) {
-		
-		int pos = listaTelefonos.indexOf(telBuscado); //te busca el primero, si quieres el último lastindex
+	public boolean eliminar(int telBuscado) {
+		int pos=-1;
+		for(int i=0; i<listaTelefonos.size(); i++) {
+			if(telBuscado==listaTelefonos.get(i).getTelefono()) {
+				pos=i;
+			}
+		}
+		System.out.println("posicion" + pos);
 		if(pos!=-1) {
 			System.out.print(telBuscado + "se ha encontrado en la posición "+ pos);
 			listaTelefonos.remove(pos);
@@ -62,10 +67,24 @@ public class CListaTfnos {
 		System.out.println("LISTA CONTACTOS: ");
 		for(int i=0;i<listaTelefonos.size();i++)
 			{
-			System.out.println("Nombre:"+ listaTelefonos.get(i).getNombre());
-			System.out.println("Email:");
-			System.out.println("Telefono:");
+			System.out.println("Nombre: "+ listaTelefonos.get(i).getNombre());
+			System.out.println("Email: " + listaTelefonos.get(i).getEmail());
+			System.out.println("Telefono: "+ listaTelefonos.get(i).getTelefono());
 			}
+	}
+	
+	public boolean mostrarPersona(String nombre) {
+		System.out.println("DATOS CONTACTO: ");
+		boolean personaEncontrada = false; 
+		for(int i=0;i<listaTelefonos.size();i++) {
+			if(nombre.equals(listaTelefonos.get(i).getNombre())){
+			System.out.println("Nombre: "+ listaTelefonos.get(i).getNombre());
+			System.out.println("Email: " + listaTelefonos.get(i).getEmail());
+			System.out.println("Telefono: "+ listaTelefonos.get(i).getTelefono());
+			return personaEncontrada=true;
+			}
+		}
+		return personaEncontrada;
 	}
 	
 }

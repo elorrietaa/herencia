@@ -48,22 +48,35 @@ public class PrincipalRecursividad {
 		//recursividad1.MaximoDeLaCadena(cadenaEnterosDos);
 	
 		//correccion clase:
-			recursividad1.MostrarMaximo(cadenaEnterosDos);
-			
-		//Ejercicio8. Crea una funcion recursiva que devuelva un string del reves
-		String [] palabra= {"H", "O", "L", "A"};
-		String [] palabraAlreves = new String [palabra.length];
-		System.out.println("Ejercicio8. Crea una funcion recursiva que devuelva un string del reves");
-		//palabraAlreves=recursividad1.reverse(String [] palabra);
-		System.out.println(palabraAlreves);
+		recursividad1.MostrarMaximo(cadenaEnterosDos);
 		
-		//Ejercicio9. Crea una funcion recursiva que devuelva el numero binario de un numero entero cualquiera
+		//corrección clase con dos funciones y sin eliminar posiciones del vector
+		int maximo=-1;
+		maximo= recursividad1.maximo(cadenaEnterosDos);
+		System.out.println("Máximo es: " + maximo);
+		
+		//Ejercicio8. Crea una funcion recursiva que devuelva un string del reves
+		String [] str= {"H", "O", "L", "A"};
+		String [] str2 = new String [str.length];
+		System.out.println("Ejercicio8. Crea una funcion recursiva que devuelva un string del reves");
+		str2=recursividad1.invertirString(str);
+		for(int i=0; i<str2.length; i++) {
+			System.out.println(str2[i]);
+		}
+		
+//MAL	//Ejercicio9. Crea una funcion recursiva que devuelva el numero binario de un numero entero cualquiera
+		System.out.println("Calcular binario sin recursividad:");
+		int numBinario=recursividad1.calcularBinario(8);
+		System.out.println(numBinario);
 		int numeroBinario=0;
 		System.out.println("Ejercicio9. Crea una funcion recursiva que devuelva el numero binario de un numero entero cualquiera");
-		//numeroBinario=recursividad1.binario(8);
+		numeroBinario=recursividad1.decBin(8);
 		System.out.println(numeroBinario);
 		
-		 
+		//Ejercicio10. Crea una funcion recursiva que determine si un numero es primoo no.
+		
+		//Ejercicio11. Crea un programa que muestre los numeros pares hasta 100 por pantalla.
+
 		
 	}
 
