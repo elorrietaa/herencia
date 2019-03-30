@@ -41,7 +41,7 @@ public class CalcularPrecios {
 	 * @param precioTotal
 	 * @return precioTotal ; devuelve la variable precioTotal
 	 */
-	
+
 	public static float CalcularPrecioTotal(float [] precioConIva, int [] contadorProductos )
 	{
 		//Declaración e inicialización de variables

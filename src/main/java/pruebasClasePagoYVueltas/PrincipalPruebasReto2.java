@@ -26,7 +26,7 @@ public class PrincipalPruebasReto2 {
 	System.out.println("Total vueltas: "+totalVueltas);
 	System.out.println("Total vueltas: "+df.format(totalVueltas));
 	float numeroDinero []= {0,0,0,0,0,0,0,0,0,0,0,0,0};
-	numeroDinero=CalcularVueltas.CalcularNumeroVueltas(5);
+	numeroDinero=CalcularVueltas.CalcularNumeroVueltas(totalVueltas);
 	for(int i=0; i<numeroDinero.length;i++) {
 		System.out.println("numero de "+Dinero1.mensajeBilletes[i]+": "+dfe.format(numeroDinero[i]));
 	}

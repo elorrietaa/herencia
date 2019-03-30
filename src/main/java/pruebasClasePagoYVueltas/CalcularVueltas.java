@@ -71,7 +71,7 @@ public class CalcularVueltas {
 			float totalVueltas=precioIntroducidoAcumulado-precioTotal;
 			return totalVueltas;
 		}
-		
+//MAL VUELTAS			
 		public static float[] CalcularNumeroVueltas(float totalVueltas)
 
 		{
