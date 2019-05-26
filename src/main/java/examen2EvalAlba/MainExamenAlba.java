@@ -45,6 +45,9 @@ public class MainExamenAlba {
 		System.out.println("***mostrar lista alumnos de la asignatura");
 		asignatura1.listarAlumnos(asignatura1.getAlumnos());
 		
+		//imprimir FICHERO CON LA LISTA DE ALUMNOS
+		funciones.imprimirListaAlumnos(asignatura1, asignatura1.getAlumnos());
+		
 		System.out.println("***3. CALCULAR NOTA FINAL Y ORDENAR EL ARRAY ALUMNOS DE MAYOR A MENOR");
 		
 		double nf=alumno1.notaFinal();

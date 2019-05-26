@@ -1,4 +1,7 @@
 package examen2EvalAlba;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class FuncionesExamenAlba {
@@ -56,6 +59,63 @@ public class FuncionesExamenAlba {
 				}	
 				return arrayAlumnos;
 		
+	}
+	
+
+
+	/**
+	 * Método: imprimirListaAlumnos, escribe en el fichero la lista de alumnos de la asignatura
+	 * En el caso de que el fichero que se desea guardar no exista, mustra un mensaje por consola
+	 * @param modelo
+	 * @param vista
+	 */
+	public void imprimirListaAlumnos(Asignatura asignatura, Alumno [] alumnos) {
+	
+		FileWriter fichero = null;
+        PrintWriter writer = null;
+        try  
+        {
+        	File archivo = new File("C:\\workspace\\RETO4/listaAlumnos.txt");
+        	if (!archivo.exists()) {
+        	    System.out.println("OJO: ¡¡No existe el archivo de configuración!!");
+        	    System.exit(0);
+        	}
+            fichero = new FileWriter("C:\\workspace\\marzo/listaAlumnos.txt", true); // true es para añadir al final de un fichero ya existente
+            writer = new PrintWriter(fichero);
+            //vista.detallesReserva.tFPrecioReserva.getX() 
+			writer.println("*************************************************************************************");
+			writer.println("     	 Asignatura      ");
+			writer.println("*************************************************************************************");
+			writer.println();
+			writer.println("La asignatura es: Código asignatura: " + asignatura.getCod_Asignatura() + " , Nombre asignatura: " + asignatura.getNombre());
+			writer.println();
+			
+			writer.println("*************************************************************************************");
+			writer.println("     	 Lista alumnos:      ");
+			writer.println("*************************************************************************************");
+			writer.println();
+			System.out.println("--------------------------------------------");
+			for (int i = 0; i < asignatura.getNumero(); i++) {
+				writer.println(
+						alumnos[i].getNombre() + " - " + alumnos[i].getNota_examen() + " - " + alumnos[i].getNota_trabajo()
+								+ " - " + alumnos[i].getNota_practica() + "-->" + alumnos[i].getNota_final());
+			}
+			System.out.println("--------------------------------------------");
+			writer.println("*************************************************************************************");
+			writer.println();
+			
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+           try {
+           // Nuevamente aprovechamos el finally para 
+           // asegurarnos que se cierra el fichero.
+           if (null != fichero)
+              fichero.close();
+           } catch (Exception e2) {
+              e2.printStackTrace();
+           }
+        }
 	}
 	
 }

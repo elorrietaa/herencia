@@ -21,7 +21,7 @@ public class PrincipalArrayList {
 	//para eliminar:
 	listaPaises.remove(1); //elimina por la posición
 	listaPaises.remove("Alemania"); //elimina por el nombre
-	ArrayList <Integer> edad=new ArrayList();
+	//ArrayList <Integer> edad=new ArrayList() ;
 	
 	
 	//seleccionar
@@ -30,7 +30,7 @@ public class PrincipalArrayList {
 	//buscar
 	listaPaises.indexOf(1);
 
-	int indexOf(Object elementoBuscado);
+//	int indexOf(Object elementoBuscado);
 	
 	String paisBuscado ="Francia";
 	int pos = listaPaises.indexOf(paisBuscado);
