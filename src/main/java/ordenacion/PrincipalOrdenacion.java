@@ -6,8 +6,7 @@ public class PrincipalOrdenacion {
 		new Burbuja();
 		int[] desOrdenado = {7,3,9,5,8,2};
 		Burbuja.bubble(desOrdenado);
-		
-		new MergeSort();
+	
 		int [] A= {3,7};
 		int [] B= {4,6};
 		
