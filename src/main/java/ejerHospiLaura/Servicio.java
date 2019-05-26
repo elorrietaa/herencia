@@ -1,0 +1,12 @@
+package ejerHospiLaura;
+
+public enum Servicio {
+	
+	CIRUGIA,
+	OFTALMOLOGIA,
+	DERMATOLOGIA,
+	CARDIOLOGIA,
+	TRAUMATOLOGIA,
+	GINECOLOGIA;
+
+}
